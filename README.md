@@ -21,3 +21,9 @@ Python "star expression" can be used to address this problem. For example, suppo
 As another example, suppose you have user records that consist of a name and email address, followed by an arbitrary number of phone numbers. You could unpack the records like this: (see code)
 ### 3.
 It is worth nothing that the phone_numbers variabl will always be a list, regardsless of how many phone numbers are unpacked (including none). Thus, any code taht uses phone_numbers won't have to account for the possibility that it might not be a list or perform any kind of additional type checking. The starred variable can also be the first one in the list. FOr example, say you have a sequence of values representing your company's sales figures for the last eight quarters. If you want to see how the most recent quarter stacks up to the average of the first seven, you could do someting like this: (see code)
+
+* Discussion
+Extended iterable unpacking is tailor-made for unpacking iterables of unknown or arbirtrary length. **Oftentimes, these iterables have some known component or pattern to their construction _(e.g. "everything after element 1 is a phone number")_**
+and star unpacking lets the developer leverage those patterns easily instead of perfroming acrobatics to get at the relevant elements in the iterable. 
+### 4. 
+It is worth nothing that the star syntax can be especially useful when iterating over a sequence of tuples of varying length. For example, perhaps a sequence of tagged tuples . (see code)
