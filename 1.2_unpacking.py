@@ -23,3 +23,38 @@ print(current)
 trailing_avg = sum(trailing_qtr) / len(trailing_qtr)
 return avg_comparison(trailing_avg, current_qtr)
 '''
+
+# 4
+records = [
+	('foo', 1, 2),
+	('bar', 'hello'),
+	('foo', 3, 4)
+	]
+
+def do_foo(x, y):
+	print('foo', x, y)
+
+def do_bar(s):
+	print('bar', s)
+
+for tag, *args in records:
+	if tag == 'foo':
+		do_foo(*args)
+	elif tag == 'bar':
+		do_bar(*args)
+
+
+# 5
+
+line = 'nobody:*:-2:-2:Unprivlileged User:/var/empty:/usr/bin/false'
+uname, *fields, homedir, sh = line.split(':')
+print(uname)
+print(homedir)
+print(sh)
+
+# 6 
+
+record = ('ACME', 50, 123.45, (12, 18, 2012) )
+name, *_, (*_, year) = record
+print(name)
+print(year)
