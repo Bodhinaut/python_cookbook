@@ -32,5 +32,12 @@ Star unpacking can also be useful when combined with certain kinds of string pro
 
 Sometimes you might want to unpack values and throw them away. You can't just specify a bare* when unpacking, but you could use a common throway variable name, such as _ or ign (ignore). For example: (see code #6)
 
+Star unpacking and list-processing features of various functional languages share certain similarities. For example, if you have a list, you can eeasily split it into head and tail components like this: (code #7)
+
+One could imagine writing functions that perform such splitting in order to carry out some kind of cler recursive algorithm. For example (code #8)
+
+_However_, be aware that recursion is not really a strong Python feature due to the inherent recursion limit. Thus, this last example might be nothing more than an academic curiosity in practice.
+
+* End1.2 Unpacking Elements from Iterables of Arbitrary Length
 
 
